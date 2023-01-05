@@ -5,8 +5,8 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: #1D3557;
-  color: #FFFFFF;
+  background: #C20114;
+  color: #C7D6D5;
 }
 
 div {
@@ -28,4 +28,22 @@ h1 {
 a {
   color: #00B7FF;
   font-size: 2rem;
+}
+
+table {
+ border: 1px solid #C7D6D5;
+ padding: 1rem;
+}
+
+td, th {
+  padding: 1rem;
+}
+
+th {
+  background: rgba(199, 214, 213, 1);
+  color: #C20114;
+}
+
+tr:nth-child(even) {
+  background: rgba(199, 214, 213, .25);
 }

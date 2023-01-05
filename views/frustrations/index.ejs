@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/frustrations.css">
+  <title>Frustrations</title>
+</head>
+<body>
+  <div>
+    <h1>MEN Stack Frustrations</h1>
+    <a href="/">Click here to hide all of these frustrations.</a>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Frustration #1</th>
+        <th>Frustration #2</th>
+        <th>Frustration #3</th>
+        <th>Frustration #4</th>
+        <th>Frustration #5</th>
+      </tr>
+      <% frustrations.forEach(frustration => { %>
+      <tr>
+        <td><%= frustration.name %></td>
+        <td><%= frustration.ranking[0] %></td>
+        <td><%= frustration.ranking[1] %></td>
+        <td><%= frustration.ranking[2] %></td>
+        <td><%= frustration.ranking[3] %></td>
+        <td><%= frustration.ranking[4] %></td>
+      </tr>
+      <% }) %>
+    </table>
+  </div>
+</body>
+</html>
