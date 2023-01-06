@@ -48,9 +48,21 @@ function show(req, res) {
   });
 };
 
+function deleteFrustration(req, res) {
+  Frustration.findByIdAndDelete(req.params.id)
+  .then(todo => {
+    res.redirect('/frustrations')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/frustrations')
+  });
+}
+
 export {
   index,
   newFrustration as new,
   create,
   show,
+  deleteFrustration as delete
 }

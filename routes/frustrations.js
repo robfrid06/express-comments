@@ -11,6 +11,9 @@ router.get('/:id', frustrationsCtrl.show);
 // POST /frustrations
 router.post('/', frustrationsCtrl.create);
 
+// DELETE /frustrations
+router.delete('/:id', frustrationsCtrl.delete)
+
 
 export {
   router

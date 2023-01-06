@@ -19,6 +19,7 @@
         <th>Frustration #3</th>
         <th>Frustration #4</th>
         <th>Frustration #5</th>
+        <th>Delete</th>
       </tr>
       <% frustrations.forEach(frustration => { %>
       <tr>
@@ -28,6 +29,15 @@
         <td><a href="/frustrations/<%= frustration._id %>"><%= frustration.ranking[2] %></a></td>
         <td><a href="/frustrations/<%= frustration._id %>"><%= frustration.ranking[3] %></a></td>
         <td><a href="/frustrations/<%= frustration._id %>"><%= frustration.ranking[4] %></a></td>
+        <td>
+          <form 
+          action="/frustrations/<%= frustration._id %>?_method=DELETE"
+          class="delete-form"
+          method="POST"
+          >
+            <button type="submit">X</button>
+          </form>
+        </td>
       </tr>
       <% }) %>
     </table>

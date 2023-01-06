@@ -47,3 +47,16 @@ th {
 tr:nth-child(even) {
   background: rgba(199, 214, 213, .25);
 }
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+	
+.delete-form button {
+  color: red;
+}
+	
+li {
+  list-style: none;
+}
