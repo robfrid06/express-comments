@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/frustrations.css">
+  <link rel="stylesheet" href="/stylesheets/frustrations/style.css">
   <title>Frustrations</title>
 </head>
 <body>
@@ -23,14 +23,15 @@
       <% frustrations.forEach(frustration => { %>
       <tr>
         <td><%= frustration.name %></td>
-        <td><%= frustration.ranking[0] %></td>
-        <td><%= frustration.ranking[1] %></td>
-        <td><%= frustration.ranking[2] %></td>
-        <td><%= frustration.ranking[3] %></td>
-        <td><%= frustration.ranking[4] %></td>
+        <td><a href="/frustrations/<%= frustration._id %>"><%= frustration.ranking[0] %></a></td>
+        <td><a href="/frustrations/<%= frustration._id %>"><%= frustration.ranking[1] %></a></td>
+        <td><a href="/frustrations/<%= frustration._id %>"><%= frustration.ranking[2] %></a></td>
+        <td><a href="/frustrations/<%= frustration._id %>"><%= frustration.ranking[3] %></a></td>
+        <td><a href="/frustrations/<%= frustration._id %>"><%= frustration.ranking[4] %></a></td>
       </tr>
       <% }) %>
     </table>
+    <a href="/frustrations/new">Record your frustrations!</a>
   </div>
 </body>
 </html>

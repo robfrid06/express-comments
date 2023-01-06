@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/frustrations/show.css">
+  <title><%= frustration.name %>'s Frustrations</title>
+</head>
+<body>
+  <h1><%= frustration.name %>'s Frustrations</h1>
+  <ol>
+    <% frustration.ranking.forEach(uniqueFrustration => { %>
+      <li><%= uniqueFrustration %></li>
+    <% }) %>
+  </ol>
+  <a href="/frustrations">Return</a>
+</body>
+</html>
