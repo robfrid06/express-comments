@@ -8,12 +8,15 @@
   <title><%= frustration.name %>'s Frustrations</title>
 </head>
 <body>
-  <h1><%= frustration.name %>'s Frustrations</h1>
-  <ol>
-    <% frustration.ranking.forEach(uniqueFrustration => { %>
-      <li><%= uniqueFrustration %></li>
-    <% }) %>
-  </ol>
-  <a href="/frustrations">Return</a>
+  <div>
+    <h1><%= frustration.name %>'s Frustrations</h1>
+    <ol>
+      <% frustration.ranking.forEach(uniqueFrustration => { %>
+        <li><%= uniqueFrustration %></li>
+      <% }) %>
+    </ol>
+    <a href="/frustrations/<%= frustration._id %>/edit">Edit Frustrations</a>
+    <a href="/frustrations">Return</a>
+  </div>
 </body>
 </html>

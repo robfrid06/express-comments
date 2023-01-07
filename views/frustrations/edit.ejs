@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/frustrations/new.css">
+  <title>Frustrations</title>
+</head>
+<body>
+  <div>
+    <h1>MEN Stack Frustrations</h1>
+    <h2>Edit your MEN Stack frustrations below:</h2>
+    <form action="/frustrations/<%= frustration._id %>?_method=PUT " method="POST" autocomplete="off">
+      <div class="frustration-div">
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Name" id="name" value="<%= frustration.name %>">
+      </div>
+      <div class="frustration-div">
+        <label for="frustration1">Frustration #1:</label>
+        <input type="text" name="frustration1" placeholder="MongoDB" value="<%= frustration.ranking[0] %>">
+      </div>
+      <div class="frustration-div">
+        <label for="frustration2">Frustration #2:</label>
+        <input type="text" name="frustration2" placeholder="Express" value="<%= frustration.ranking[1] %>">
+      </div>
+      <div class="frustration-div">
+        <label for="frustration3">Frustration #3:</label>
+        <input type="text" name="frustration3" placeholder="Node.js" value="<%= frustration.ranking[2] %>">
+      </div>
+      <div class="frustration-div">
+        <label for="frustration4">Frustration #4:</label>
+        <input type="text" name="frustration4" placeholder="Tech Stacks" value="<%= frustration.ranking[3] %>">
+      </div>
+      <div class="frustration-div">
+        <label for="frustration5">Frustration #5:</label>
+        <input type="text" name="frustration5" placeholder="The Unknown" value="<%= frustration.ranking[4] %>">
+      </div>
+      <button type="submit">Edit your frustrations!</button>
+    </form>
+    <a href="/frustrations">Return</a>
+  </div>
+</body>
+</html>
